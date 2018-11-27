@@ -8,13 +8,14 @@ pipeline {
   stages {
     stage('git') {
       steps {
-        sh '''cd /home/yang/jenkins_test
+        sh '''cd /home/yang
 git clone https://github.com/yang7824/jenkins_test.git'''
       }
     }
     stage('build') {
       steps {
-        sh 'sudo -H pip install -r requirements.txt'
+        sh '''cd /home/yang/jenkins_test
+sudo -H pip install -r requirements.txt'''
       }
     }
     stage('run') {
