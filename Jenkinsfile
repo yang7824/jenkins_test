@@ -20,7 +20,7 @@ pip install -r requirements.txt'''
     }
     stage('run') {
       steps {
-        sh '''python app.py
+        sh '''python app.py &
 '''
       }
     }
