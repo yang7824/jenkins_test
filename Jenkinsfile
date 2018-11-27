@@ -8,8 +8,7 @@ pipeline {
   stages {
     stage('git') {
       steps {
-        sh '''mkdir /home/yang/jenkins_test
-cd /home/yang/jenkins_test'''
+        sh 'mkdir /home/yang/jenkins_test || cd /home/yang/jenkins_test'
         git(url: 'https://github.com/yang7824/jenkins_test.git', changelog: true, branch: 'master')
       }
     }
