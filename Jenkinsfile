@@ -10,7 +10,7 @@ pipeline {
       steps {
         sh '''mkdir /home/yang/jenkins_test
 cd /home/yang/jenkins_test'''
-        git(url: 'https://github.com/yang7824/jenkins_test.git', changelog: true)
+        git(url: 'https://github.com/yang7824/jenkins_test.git', changelog: true, branch: 'master')
       }
     }
     stage('build') {
