@@ -8,8 +8,8 @@ pipeline {
   stages {
     stage('git') {
       steps {
-        dir(path: '/home/yang/jenkins_test')
-        git(url: 'https://github.com/yang7824/jenkins_test.git', branch: 'master')
+        sh '''cd /home/yang/jenkins_test
+git clone https://github.com/yang7824/jenkins_test.git'''
       }
     }
     stage('build') {
